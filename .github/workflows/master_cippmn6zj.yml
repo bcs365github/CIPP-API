@@ -6,7 +6,7 @@ name: Build and deploy Powershell project to Azure Function App - cippmn6zj
 on:
   push:
     branches:
-      - master
+      - 'master'
   workflow_dispatch:
 
 env:
@@ -26,9 +26,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_D228271D5F044BE5AAB1B43D82A66A06 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9EF5E8DB2F504CB68D0D372810FCA3BA }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_006350AA660F4EF69B99B069B8993553 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6B0EF1BAC3E84514BD3CC59B49E876AE }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C713FE30AA444CC9A5484FB47AEDA4BD }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A39294C0C27D4F3D9727D38413AD7277 }}
 
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
